@@ -1,6 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    box-sizing: border-box;
 }
 
 ul {
@@ -129,8 +132,6 @@ header {
     width: 100%;
 }
 
-.services {}
-
 .services-title {
     font-family: 'Noto Sans', sans-serif;
     font-size: 32px;
@@ -156,7 +157,55 @@ header {
     text-align: center;
     color: #969ab2;
     margin: 0 auto;
-    margin-bottom: 2%;
+    margin-bottom: 72px;
+}
+
+.service-tickets {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-ticket-items {
+    width: 282px;
+    height: 282px;
+    background-repeat: no-repeat;
+    background-image: url(./images/image.png);
+    padding-top: 95px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+}
+
+.service-ticket-items:nth-child(4n) {
+    margin-right: 0px;
+}
+
+.service-ticket-name {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto 8px;
+}
+
+.service-ticket-line {
+    width: 48px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0 auto 12px;
+}
+
+.service-ticket-description {
+    width: 186px;
+    height: 44px;
+    opacity: 0.8;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 auto;
 }
 
 .asd {
