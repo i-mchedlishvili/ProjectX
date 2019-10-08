@@ -162,7 +162,7 @@ header {
 
 .service-tickets {
     width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 240px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -179,6 +179,10 @@ header {
 
 .service-ticket-items:nth-child(4n) {
     margin-right: 0px;
+}
+
+.service-ticket-items:nth-child(n+5) {
+    margin-bottom: 0px;
 }
 
 .service-ticket-name {
@@ -218,17 +222,15 @@ header {
     width: 444px;
     height: 665px;
     display: inline-block;
-    margin-top: 339px;
     margin-bottom: 229px;
 }
 
 .image-text-section-two {
     width: 756px;
     height: 665px;
-    float: right;
     display: inline-block;
-    margin-top: 339px;
-    margin-bottom: 229px;
+    padding-left: 24px;
+    position: relative;
 }
 
 .about-us {
@@ -264,8 +266,6 @@ header {
     width: 732px;
     height: 340px;
     margin-bottom: 24px;
-    margin-left: 24px;
-    float: right;
 }
 
 .about-us-image-left {
@@ -278,7 +278,6 @@ header {
     background-image: url(./images/aboutusimage2.png);
     width: 264px;
     height: 288px;
-    margin-left: 24px;
     display: inline-block;
 }
 
@@ -289,27 +288,30 @@ header {
     font-size: 16px;
     color: #969ab2;
     float: right;
-    margin-top: 48px;
+    margin-top: 24px;
     margin-bottom: 12px;
 }
 
 .icons {
     margin-left: 288px;
     width: 180px;
+    position: absolute;
+    top: 615px;
 }
 
 .fb-icon {
-    background-image: url(./icons/fb-icon.png);
+    background-image: url(./icons/fb.svg);
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
     display: inline-block;
     margin-left: 24px;
     margin-right: 36px;
+    background-size: cover;
 }
 
 .insta-icon {
-    background-image: url(./icons/insta-icon.png);
+    background-image: url(./icons/insta.svg);
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
@@ -318,7 +320,7 @@ header {
 }
 
 .linked-in-icon {
-    background-image: url(./icons/linked-in-icon.png);
+    background-image: url(./icons/linked-in.svg);
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
@@ -333,23 +335,24 @@ header {
     border: solid 1px rgba(151, 151, 151, 0.1);
     background-color: #ffffff;
     margin: 0 auto;
+    display: flex;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-us-section-one {
     margin-left: 40px;
-    display: inline-block;
 }
 
 .contact-us {
     width: 170px;
     height: 43px;
     font-family: 'NotoSans', sans-serif;
-  font-size: 32px;
-  font-weight: 600;
-  color: #495057;
-  margin-bottom: 32px;
-  margin-top: 40px;
-  
+    font-size: 32px;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 32px;
+    margin-top: 40px;
 }
 
 .contact-us-line {
@@ -363,58 +366,59 @@ header {
     width: 480px;
     height: 187px;
     font-family: 'NotoSans', sans-serif;
-  font-size: 16px;
-  color: #969ab2;
+    font-size: 16px;
+    color: #969ab2;
 }
 
 .contact-us-section-two {
     width: 600px;
     height: 227px;
-    display: inline-block;
-    float: right;
+    margin-left: 40px;
+    margin-top: 40px;
+}
 
+.name-input-container {
+    width: 292px;
+    height: 78px;
+    display: inline-block;
+}
+
+.mail-input-container {
+    width: 292px;
+    height: 78px;
+    display: inline-block;
+    margin-left: 11px;
 }
 
 .full-name {
     width: 67px;
-    height: 19px;
     font-family: 'LucidaGrande', sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #495057;
-  display: inline-block;
+    font-size: 14px;
+    color: #495057;
+    margin-bottom: 11px;
 }
 
 .mail {
     width: 44px;
-    height: 13px;
     font-family: 'LucidaGrande', sans-serif;
-  font-size: 14px;
-  color: #495057;
-  display: inline-block;
+    font-size: 14px;
+    color: #495057;
+    margin-bottom: 11px;
 }
 
-.name-input {
+.input-element {
     display: inline-block;
     width: 292px;
     height: 48px;
     border-radius: 2px;
     border: solid 1px #e6ecf5;
     background-color: #ffffff;
-
+    float: left;
 }
 
-.mail-input {
-    display: inline-block;
-    width: 292px;
-    height: 48px;
-    border-radius: 2px;
-    border: solid 1px #e6ecf5;
-    background-color: #ffffff;
+.message-input {
+    width: 600px;
+    height: 130px;
 }
 
 ::placeholder {
@@ -428,13 +432,70 @@ header {
     line-height: 1.5;
     letter-spacing: normal;
     color: #e0e2e9;
+    padding-left: 16px;
 }
 
-
-
-
-
-.asd {
-    width: 300px;
-    height: 300px;
+.message-us-textarea {
+    width: 600px;
+    height: 130px;
+    border-radius: 2px;
+    border: solid 1px #e6ecf5;
+    background-color: #ffffff;
+    margin-top: 16px;
+    margin-bottom: 24px;
 }
+
+textarea::placeholder {
+    width: 361px;
+    height: 15px;
+}
+
+.send-message-button {
+    width: 600px;
+    height: 48px;
+    border-radius: 2px;
+    background-color: #0077ff;
+    border: none;
+    font-family: 'NotoSans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: #1b1b1b;
+    margin-top: -88px;
+    position: relative;
+}
+
+.footer-icons {
+    position: absolute;
+    left: 50%;
+    top: 144px;
+    display: flex;
+    transform: translateX(-50%)
+}
+
+.footer-fb {
+    background-image: url(./icons/footer-fb.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-right: 36px;
+}
+
+.footer-insta {
+    background-image: url(./icons/footer-insta.svg);
+    width: 24px;
+    height: 24px;
+    margin-right: 36px;
+}
+
+.footer-linkedin {
+    background-image: url(./icons/footer-linkedin.svg);
+    width: 24px;
+    height: 24px;
+}
+
